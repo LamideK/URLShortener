@@ -3,11 +3,12 @@ from sqlalchemy import Column, Integer, String, Boolean
 from sqlalchemy.sql.expression import text
 from sqlalchemy.sql.sqltypes import TIMESTAMP
 
-class Post(Base):
-    __tablename__ = 'posts'
+class Urls(Base):
+    __tablename__ = 'url_list'
 
     id = Column(Integer, primary_key= True, nullable= False)
-    title = Column(String, nullable= False)
-    content = Column(String, nullable= False)
-    published = Column(Boolean, server_default= 'TRUE', nullable= True)
-    created_at = Column(TIMESTAMP(timezone= True), nullable= False, server_default= text('now()'))
+    url = Column(String, nullable= False)
+    target_url = Column(String, nullable= False)  # stores the target url
+    admin_url = Column(String, nullable= False)
+    is_active = Column(Boolean, nullable= True) 
+    clicks = Column(Integer) 

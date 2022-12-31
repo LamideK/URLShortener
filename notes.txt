@@ -1,0 +1,7 @@
+Packages
+- Validators: used to validate values like email addresses, IP addresses etc
+- dotenv: this is used to read key-pair values in a file and set them as environment values (eg, database credentials for configuration) 
+- the config file is the fallback for the .env file
+
+
+**updated the database file, make sure to check nothing is  specifically broken
